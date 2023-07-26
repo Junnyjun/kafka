@@ -1,6 +1,5 @@
-package io.git.kafka.consumer
+package io.git.kafka.simple
 
-import io.git.kafka.consumer.SimpleConsumer.Config.config
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.kafka.clients.consumer.KafkaConsumer
 import org.apache.kafka.common.serialization.StringDeserializer

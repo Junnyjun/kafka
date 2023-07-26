@@ -1,6 +1,5 @@
-package io.git.kafka.consumer
+package io.git.kafka.simple
 
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 class SimpleConsumerTest(){

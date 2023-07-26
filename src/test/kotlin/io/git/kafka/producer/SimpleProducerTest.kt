@@ -1,5 +1,6 @@
 package io.git.kafka.producer
 
+import io.git.kafka.simple.SimpleProducer
 import org.junit.jupiter.api.Test
 
 class SimpleProducerTest {
