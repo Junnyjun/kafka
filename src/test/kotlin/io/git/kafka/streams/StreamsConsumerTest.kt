@@ -2,6 +2,7 @@ package io.git.kafka.streams
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
+import java.util.stream.Stream
 
 class StreamsConsumerTest(){
 
@@ -9,8 +10,6 @@ class StreamsConsumerTest(){
 
             @Test
             fun subscribe() {
-                consumer.stream()
 
-                println()
             }
 }

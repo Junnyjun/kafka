@@ -19,12 +19,21 @@ data class StreamsConsumer(
     private val topic: String,
 ) {
     fun stream(): Unit = KafkaStreams(
-        StreamsBuilder()
+        StreamsBuilder()                                                                                     
             .also { it.stream<String, String>("junnyland_Stream") }
             .also { it to "junnyland_Stream_copy" }
             .build(),
         config
     ).start()
+
+    fun consume(): Unit = KafkaConsumer<String, String>(config).use {
+        it.subscribe(listOf(topic))
+        while (true) {
+            it.poll(1000).forEach { record ->
+                println("key: ${record.key()}, value: ${record.value()}")
+            }
+        }
+    }
 
     private companion object Config {
         val config = Properties().apply {

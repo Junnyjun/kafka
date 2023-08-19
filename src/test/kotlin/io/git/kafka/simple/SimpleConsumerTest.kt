@@ -1,6 +1,7 @@
 package io.git.kafka.simple
 
 import org.junit.jupiter.api.Test
+import kotlin.math.min
 
 class SimpleConsumerTest(){
 
@@ -11,4 +12,9 @@ class SimpleConsumerTest(){
             consumer.subscribe()
 
         }
+
+    @Test
+    fun quetion(){
+
+    }
 }
